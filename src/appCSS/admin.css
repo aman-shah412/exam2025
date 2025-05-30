@@ -1,0 +1,130 @@
+.admin-main-content-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 70rem;
+}
+
+.admin-content {
+    background-color: var(--secondary-color);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-lower-grid{
+    height: 100%;
+}
+
+.admin-lower-grid-content{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.80fr 4.20fr 1fr;
+    height: 100%;
+}
+
+.left-grid-lower{
+    padding: 2rem 0 2rem 2rem;
+}
+
+.admin-create-btn{
+    color: white;
+    width: 9rem;
+    background-color: var(--primary-color);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.admin-create-btn:hover{
+    background-color: var(--hover-color);
+    color: white;
+}
+
+.admin-overview-btn{
+    color: white;
+    font-weight: 400;
+    width: 7rem;
+    background-color: var(--primary-color);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.admin-overview-btn:hover{
+    background-color: var(--hover-color);
+    color: white;
+}
+
+.admin-search-exam{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 2px solid #CFCFCF;
+    outline: none;
+}
+
+.center-grid-lower{
+    padding: 2rem;
+}
+
+.exam-type-tile{
+    width: calc(100% / 3 - 20px);
+    min-width: 170px;
+    max-width: 280px;
+    height: 320px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.select-btn{
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 2.5rem;
+    background-color: var(--secondary-color);
+}
+
+.right-grid-lower{
+    background-color: white;
+}
+
+.steps-content-grid{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 0.5fr 1fr 4fr 0.5fr;
+    height: 100%;
+    padding: 2rem;
+}
+
+.steps-completion-grid{
+    width: calc(100% - 50px);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    height: 1rem;
+}
+
+.steps-filled{
+    background-color: #6CB98D;
+}
+
+.steps-pending{
+    background-color: var(--secondary-color);
+}
+/*
+.left-mini-nav {
+    height: 4.5rem;
+}
+
+.left-content {
+    height: calc(100% - 30px);
+    padding: 1.5rem 2rem;
+    box-sizing: border-box;
+}
+
+
+.admin-create-btn span{
+    font-weight: 400;
+    margin-left: 5px;
+}
+     */
