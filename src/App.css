@@ -2,6 +2,7 @@
   --primary-color: #7E7DFA;
   --secondary-color: #ECEBEB;
   --hover-color: #36373a;
+  --text-color: #374760;
 }
 
 html,
@@ -12,6 +13,6 @@ body {
   height: 100%;
 }
 
-#root{
+#root {
   height: 100%;
 }

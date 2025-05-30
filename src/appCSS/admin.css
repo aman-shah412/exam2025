@@ -12,22 +12,22 @@
     flex-direction: column;
 }
 
-.admin-lower-grid{
+.admin-lower-grid {
     height: 100%;
 }
 
-.admin-lower-grid-content{
+.admin-lower-grid-content {
     width: 100%;
     display: grid;
     grid-template-columns: 0.80fr 4.20fr 1fr;
     height: 100%;
 }
 
-.left-grid-lower{
+.left-grid-lower {
     padding: 2rem 0 2rem 2rem;
 }
 
-.admin-create-btn{
+.admin-create-btn {
     color: white;
     width: 9rem;
     background-color: var(--primary-color);
@@ -36,12 +36,12 @@
     border-radius: 5px;
 }
 
-.admin-create-btn:hover{
+.admin-create-btn:hover {
     background-color: var(--hover-color);
     color: white;
 }
 
-.admin-overview-btn{
+.admin-overview-btn {
     color: white;
     font-weight: 400;
     width: 7rem;
@@ -51,23 +51,27 @@
     border-radius: 5px;
 }
 
-.admin-overview-btn:hover{
+.admin-overview-btn:hover {
     background-color: var(--hover-color);
     color: white;
 }
 
-.admin-search-exam{
+.admin-search-exam {
     width: 100%;
     padding: 0.5rem 1rem;
     border: 2px solid #CFCFCF;
     outline: none;
 }
 
-.center-grid-lower{
+.exam-type-label {
+    font-size: 12px;
+}
+
+.center-grid-lower {
     padding: 2rem;
 }
 
-.exam-type-tile{
+.exam-type-tile {
     width: calc(100% / 3 - 20px);
     min-width: 170px;
     max-width: 280px;
@@ -77,7 +81,7 @@
     background-color: #fff;
 }
 
-.select-btn{
+.select-btn {
     width: 100%;
     border: none;
     outline: none;
@@ -85,11 +89,11 @@
     background-color: var(--secondary-color);
 }
 
-.right-grid-lower{
+.right-grid-lower {
     background-color: white;
 }
 
-.steps-content-grid{
+.steps-content-grid {
     width: 100%;
     display: grid;
     grid-template-rows: 0.5fr 1fr 4fr 0.5fr;
@@ -97,20 +101,21 @@
     padding: 2rem;
 }
 
-.steps-completion-grid{
+.steps-completion-grid {
     width: calc(100% - 50px);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     height: 1rem;
 }
 
-.steps-filled{
+.steps-filled {
     background-color: #6CB98D;
 }
 
-.steps-pending{
+.steps-pending {
     background-color: var(--secondary-color);
 }
+
 /*
 .left-mini-nav {
     height: 4.5rem;
@@ -128,3 +133,85 @@
     margin-left: 5px;
 }
      */
+
+.step-2-details {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+    gap: 10px;
+    /* max-width: 600px; */
+    /* margin: 20px; */
+}
+
+.step-2-details label {
+    font-size: smaller;
+    font-weight: 500;
+    color: #123456;
+}
+
+.step-2-details input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-color: var(--secondary-color);
+    /* width: 100%; */
+}
+
+.card h4 {
+    color: var(--text-color);
+}
+
+.btn-next {
+    color: #FFFFFF;
+    width: 7rem;
+    background-color: var(--primary-color);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-next:hover,
+.btn-prev:hover {
+    background-color: var(--hover-color);
+    color: white;
+}
+
+.btn-prev {
+    color: #000000;
+    width: 9rem;
+    background-color: var(--secondary-color);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.step-3-details {
+    display: grid;
+    grid-template-columns: 325px 1fr 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.step-3-details label {
+    font-size: 14px;
+}
+
+.custom_radio {
+    width: 35px;
+    height: 35px;
+    border: 1px solid black;
+}
+
+.text_format {
+  width: 100%;
+  height: 2rem;
+  margin-top: 10px;
+  border: 1px solid rgb(206, 205, 205);
+}
+
+.center-grid-lower textarea {
+  border: 1px solid rgb(206, 205, 205);
+  border-top: none;
+  outline: none;
+}
