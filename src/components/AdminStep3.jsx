@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import { FaPlus, FaCalendarAlt, FaMinusCircle, FaArchive, FaTimesCircle, FaCheckCircle, FaRegQuestionCircle, FaSlidersH, FaCheck, FaTimes } from "react-icons/fa";
-import { FaRegPenToSquare } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom';
 import { FiCornerUpLeft, FiCornerUpRight, FiAlignLeft, FiAlignCenter, FiAlignRight, FiAlignJustify, FiFileText } from 'react-icons/fi'
 import { BsTypeBold, BsTypeItalic } from 'react-icons/bs'
 import { RiIndentDecrease, RiIndentIncrease } from 'react-icons/ri'
 import { HiLink } from 'react-icons/hi'
 
-function AdminStep3({handleStepChange}) {
+function AdminStep3({ handleStepChange }) {
     return (
         <>
             <div className='center-grid-lower d-flex justify-content-between align-items-start'>
@@ -175,30 +174,6 @@ function AdminStep3({handleStepChange}) {
                     <div className="mt-2 d-flex justify-content-between">
                         <button className="btn-prev" onClick={() => { handleStepChange("step3", "step2") }}>Previous step</button>
                         <button className="btn-next" onClick={() => { handleStepChange("step3", "step4") }}>Next step</button>
-                    </div>
-                </div>
-            </div>
-            <div className='right-grid-lower d-flex justify-content-start align-items-start'>
-                <div className='steps-content-grid'>
-                    <div className='d-flex justify-content-start align-items-center'>
-                        <h5>Step 3 - Exam Restrictions</h5>
-                    </div>
-                    <div className='d-flex justify-content-center align-items-center'>
-                        <FaRegQuestionCircle size={70} color='red' />
-                    </div>
-                    <div className='d-flex flex-column justify-content-center align-items-center'>
-                        <FiFileText size={40} color="#555555" />
-                        <p className='text-center'>Add exam restrictions for the reviewers, such as whether books, specific websites, or calculators are allowed.</p>
-                    </div>
-                    <div className='d-flex justify-content-between align-items-center'>
-                        <div className='steps-completion-grid'>
-                            <div className="steps-filled"></div>
-                            <div className="steps-filled"></div>
-                            <div className="steps-filled"></div>
-                            <div className="steps-pending"></div>
-                            <div className="steps-pending"></div>
-                        </div>
-                        <span className='bold-text'>3 of 5</span>
                     </div>
                 </div>
             </div>
