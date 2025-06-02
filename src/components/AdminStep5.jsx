@@ -45,26 +45,20 @@ function AdminStep5({ handleStepChange }) {
                 <th scope="col">Exam Status</th>
               </tr>
             </thead>
-            {/* <tbody>
+            <tbody>
               <tr>
-                <th scope="row">1</th>
                 <td>Mark</td>
                 <td>Otto</td>
-                <td>@mdo</td>
+                <td></td>
+                <td></td>
+                <td>
+
+                </td>
+                <td><input type="checkbox" name="skipRequirment" style={{ width: "2rem", height: "2rem" }} /></td>
+                <td></td>
+                <td></td>
               </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>John</td>
-                <td>Doe</td>
-                <td>@social</td>
-              </tr>
-            </tbody> */}
+            </tbody>
           </table>
         </div>
       </div>
