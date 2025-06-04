@@ -15,6 +15,7 @@ import AdminStep5 from './AdminStep5';
 function Admin() {
     const navigate = useNavigate();
 
+    const [examType, setExamType] = useState("")
     const [steps, setSteps] = useState({
         step1: true,
         step2: false,
@@ -71,7 +72,10 @@ function Admin() {
         navigate('/');
     };
 
-    const handleStepChange = (currStep, nextStep) => {
+    const handleStepChange = (currStep, nextStep, type = null) => {
+        if (type) {
+            setExamType(type)
+        }
         setSteps(prevSteps => ({
             ...prevSteps,
             [currStep]: false,
@@ -138,7 +142,7 @@ function Admin() {
                                             <FaIcons.FaCheckCircle size={30} color='#6CB98D' />
                                         </div>
                                         <div style={{ fontSize: "18px" }}>
-                                            <button className='select-btn'>Select</button>
+                                            <button className='select-btn' onClick={() => { handleStepChange("step1", "step2", "Classroom") }}>Select</button>
                                         </div>
                                     </div>
                                     <div className='exam-type-tile d-flex flex-column justify-content-between'>
@@ -160,7 +164,7 @@ function Admin() {
                                             <FaIcons.FaCheckCircle size={30} color='#6CB98D' />
                                         </div>
                                         <div style={{ fontSize: "18px" }}>
-                                            <button className='select-btn'>Select</button>
+                                            <button className='select-btn' onClick={() => { handleStepChange("step1", "step2", "Record & Review") }}>Select</button>
                                         </div>
                                     </div>
                                     <div className='exam-type-tile d-flex flex-column justify-content-between'>
@@ -182,13 +186,13 @@ function Admin() {
                                             <FaIcons.FaCheckCircle size={30} color='#6CB98D' />
                                         </div>
                                         <div style={{ fontSize: "18px" }}>
-                                            <button className='select-btn' onClick={() => { handleStepChange("step1", "step2") }}>Select</button>
+                                            <button className='select-btn' onClick={() => { handleStepChange("step1", "step2", "Live Proctoring") }}>Select</button>
                                         </div>
                                     </div>
                                 </div>
                             </>
                             }
-                            {steps.step2 && <AdminStep2 handleStepChange={handleStepChange} />}
+                            {steps.step2 && <AdminStep2 handleStepChange={handleStepChange} examType={examType} />}
                             {steps.step3 && <AdminStep3 handleStepChange={handleStepChange} />}
                             {steps.step4 && <AdminStep4 handleStepChange={handleStepChange} />}
                             {steps.step5 && <AdminStep5 handleStepChange={handleStepChange} />}

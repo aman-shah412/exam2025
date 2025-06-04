@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-function AdminStep2({ handleStepChange }) {
+function AdminStep2({ handleStepChange, examType }) {
     const [formData, setFormData] = useState({
         examName: '',
         firstStartTime: '',
@@ -37,7 +37,7 @@ function AdminStep2({ handleStepChange }) {
         <>
             <div className='center-grid-lower d-flex justify-content-between align-items-start'>
                 <div className="card p-3 w-100">
-                    <h4>New Exam <span className="text-muted">(Live Proctoring)</span></h4>
+                    <h4>New Exam <span className="text-muted">({examType})</span></h4>
 
                     <div className='w-50'>
                         <div className="step-2-details my-2">
@@ -51,7 +51,7 @@ function AdminStep2({ handleStepChange }) {
                         <div className="step-2-details my-2">
                             <label >First Start Time</label>
                             <input
-                                type="text"
+                                type="datetime-local"
                                 name="firstStartTime"
                                 value={formData.firstStartTime}
                                 onChange={handleChange} />
@@ -59,7 +59,7 @@ function AdminStep2({ handleStepChange }) {
                         <div className="step-2-details my-2">
                             <label >Last Start Time</label>
                             <input
-                                type="text"
+                                type="datetime-local"
                                 name="lastStartTime"
                                 value={formData.lastStartTime}
                                 onChange={handleChange} />
@@ -68,7 +68,7 @@ function AdminStep2({ handleStepChange }) {
                             <label >Duration (in minutes)</label>
                             <div className='d-flex justify-content-between align-items-center'>
                                 <input
-                                    type="text"
+                                    type="number"
                                     name="duration"
                                     value={formData.duration}
                                     onChange={handleChange}
@@ -79,7 +79,7 @@ function AdminStep2({ handleStepChange }) {
                                 </div>
                             </div>
                         </div>
-                        <div className="step-2-details my-2">
+                        {examType !== "Classroom" && <div className="step-2-details my-2">
                             <label >Include mobile camera?</label>
                             <div className='d-flex justify-content-end align-items-center'>
                                 <div className={`switch ${isSwitchOn.includeMobile ? 'on' : 'off'}`} onClick={() => { toggleSwitch("includeMobile") }}>
@@ -87,7 +87,7 @@ function AdminStep2({ handleStepChange }) {
                                     <div className="switch-circle"></div>
                                 </div>
                             </div>
-                        </div>
+                        </div>}
                         <div className="step-2-details my-2">
                             <label >Students upload exam?</label>
                             <div className='d-flex justify-content-end align-items-center'>
