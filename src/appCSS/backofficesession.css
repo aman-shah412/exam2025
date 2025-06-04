@@ -30,7 +30,7 @@
 }
 
 .right-grid-backoffice-session {
-    background-color: red;
+    position: relative;
     height: 100%;
 }
 
@@ -154,7 +154,7 @@
     visibility: visible;
 }
 
-.tool{
+.tool {
     position: relative;
 }
 
@@ -178,16 +178,16 @@
     opacity: 1;
 }
 
-.player-active{
+.player-active {
     background: rgb(204, 234, 255);
     border-color: rgb(204, 234, 255);
 }
 
-.attachments{
+.attachments {
     margin-top: 25px;
 }
 
-.visited-or-files{
+.visited-or-files {
     width: 15rem;
     height: 3rem;
     border: none;
@@ -195,34 +195,118 @@
     border-radius: 5px;
 }
 
-.linked-icon{
+.linked-icon {
     background-color: var(--primary-color);
     width: 3rem;
     height: 100%;
     border-radius: 5px 0 0 5px;
 }
 
-.backoffice-comments-main-div{
+.backoffice-comments-main-div {
     height: 15rem;
     margin-top: 25px;
 }
 
-.backoffice-incidents{
+.backoffice-incidents {
     /* height: calc(100% - 5px); */
     height: 100%;
     overflow-y: auto;
 }
 
-.backoffice-comment-div{
+.backoffice-comment-div {
     background-color: #DCDCDC;
 }
 
-.blue{
-    background-color: blue;
+.blue {
+    background-color: var(--primary-color);
     width: 60px;
 }
 
-.red{
-    background-color: red;
+.red {
+    background-color: #EC0000;
     width: 60px;
+}
+
+.disabled_red {
+    background-color: #FF5454;
+    width: 60px;
+}
+
+.bo_photos {
+    position: relative;
+}
+
+.bo_photos_tile {
+    background-color: #DCDCDC;
+    border-radius: 5px;
+}
+
+.bo_photos_tile img {
+    min-width: 40px;
+    border-radius: 5px 5px 0 0;
+}
+
+.bo_photos_tile div {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+}
+
+.bo_photos:hover .click_to_zoom {
+    cursor: pointer;
+    position: absolute;
+    display: flex !important;
+    align-items: center;
+    background: rgba(80, 54, 54, 0.5);
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.click_to_zoom h5 {
+    color: #FFFFFF;
+    font-size: 50px
+}
+
+.info_tag {
+    font-size: 22px;
+    padding: 20px 0;
+}
+
+.bo_info_box {
+    background-color: #DCDCDC;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.custom_bg_green{
+    background-color: #42B16B;
+}
+
+.custom_bg_grayed{
+    background-color: rgb(107, 107, 107);
+}
+
+.bo_info_mini_grid .col-9 .col-3{
+    color: #FFFFFF;
+    text-align: center;
+    max-height: 35px;
+    border-radius: 10px;
+}
+
+.bo_chats{
+    position: absolute;
+    bottom: 0;
+    padding: 20px 0;
+}
+
+.bo_chats button{
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.bo_chats_icon{
+    border-radius: 5px 0 0 5px;
 }

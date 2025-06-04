@@ -5,7 +5,7 @@ import { FaAngleDown } from "react-icons/fa";
 function Navbar() {
   return (
     <nav>
-      <img src="modified_logo_white_text_transparent.png" alt="" />
+      <img src="/modified_logo_white_text_transparent.png" alt="" />
       <div className='menu-dropdown'>
         <FaAngleDown size={25}/>
       </div>

@@ -15,13 +15,13 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/administration" element={<Admin/>} />
-        <Route path="/reviewer" element={<Reviewer/>} />
-        <Route path="/proctor" element={<Proctor/>} />
-        <Route path="/backoffice" element={<Backoffice/>} />
-        <Route path="/backoffice/exam" element={<BackofficeExam examName={"Demo"}/>} />
-        <Route path="/backoffice/session" element={<BackofficeSession/>} />
+        <Route path="/" element={<Home />} ></Route>
+        <Route path="/administration" element={<Admin />} ></Route>
+        <Route path="/reviewer" element={<Reviewer />} ></Route>
+        <Route path="/proctor" element={<Proctor />} ></Route>
+        <Route path="/backoffice" element={<Backoffice />} ></Route>
+        <Route path="/backoffice/exam" element={<BackofficeExam examName={"Demo"} />} ></Route>
+        <Route path="/backoffice/session" element={<BackofficeSession />} ></Route>
       </Routes>
     </>
   )

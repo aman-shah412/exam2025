@@ -7,7 +7,7 @@ import { FaPlay, FaLink, FaRegFolder } from "react-icons/fa";
 import { MdOutlineReplay10, MdOutlineForward10, MdVolumeUp, MdOutlineFullscreen } from "react-icons/md";
 import { PiPencil } from "react-icons/pi";
 import { FaRegTrashCan } from "react-icons/fa6";
-
+import { BsChatDots } from "react-icons/bs";
 
 
 function BackofficeSession() {
@@ -255,7 +255,72 @@ function BackofficeSession() {
                                     </div>
                                 </div>
                                 <div className='right-grid-backoffice-session'>
-
+                                    <div className='bo_photos d-flex gap-4'>
+                                        <div className='bo_photos_tile w-50'>
+                                            <img src="/photo.png" alt="" className='w-100' />
+                                            <div className='w-100 text-center'>Face Photo</div>
+                                        </div>
+                                        <div className='bo_photos_tile w-50'>
+                                            <img src="/id.png" alt="" className='w-100' />
+                                            <div className='w-100 text-center'>ID Card</div>
+                                        </div>
+                                        <div className='click_to_zoom d-none'>
+                                            <h5>Click to zoom</h5>
+                                        </div>
+                                    </div>
+                                    <div className='info_tag'>Info</div>
+                                    <div className="bo_info_box px-3 py-2">
+                                        <div className="bo_info_mini_grid row my-2">
+                                            <span className='col-3 fw-bold'>Name:</span>
+                                            <span className='col-9'>Aman Shah</span>
+                                        </div>
+                                        <div className="bo_info_mini_grid row my-2">
+                                            <span className='col-3 fw-bold'>Email:</span>
+                                            <span className='col-9'>Aman@gmail.com</span>
+                                        </div>
+                                        <div className="bo_info_mini_grid row my-2">
+                                            <span className='col-3 fw-bold'>Exam name:</span>
+                                            <span className='col-9 d-flex align-items-center'>Demo</span>
+                                        </div>
+                                        <div className="bo_info_mini_grid row my-2">
+                                            <span className='col-3 fw-bold'>Start time:</span>
+                                            <span className='col-9'>16:03:06, Oct 25th 2021</span>
+                                        </div>
+                                        <div className="bo_info_mini_grid row my-2">
+                                            <span className='col-3 fw-bold'>End time:</span>
+                                            <span className='col-9'>16:07:47, Oct 25th 2021</span>
+                                        </div>
+                                        <div className="bo_info_mini_grid row my-2 fw-bold">
+                                            <span className='col-3'>Streams included:</span>
+                                            <span className='col-9 d-flex align-items-center gap-2'>
+                                                <div className="col-3 custom_bg_green">Screen</div>
+                                                <div className="col-3 custom_bg_green">Webcam</div>
+                                                <div className="col-3 custom_bg_grayed">Mobile</div>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div className="bo_chats w-100 d-flex">
+                                        <div className='col-6 d-flex justify-content-end'>
+                                            <button className='d-flex col-7 p-0' disabled>
+                                                <div className='bo_chats_icon disabled_red d-flex align-items-center justify-content-center'>
+                                                    <BsChatDots size={30} color='white' />
+                                                </div>
+                                                <div className='d-flex align-items-center justify-content-center fw-bold'>
+                                                    Tawk Messages
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div className='col-6 d-flex justify-content-end'>
+                                            <button className='d-flex col-7 p-0'>
+                                                <div className='bo_chats_icon blue d-flex align-items-center justify-content-center'>
+                                                    <BsChatDots size={30} color='white' />
+                                                </div>
+                                                <div className='d-flex align-items-center justify-content-center fw-bold' style={{color: "var(--text-color)"}}>
+                                                    Proctor Messages
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
