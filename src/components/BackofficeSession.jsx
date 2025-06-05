@@ -12,6 +12,7 @@ import { BsChatDots } from "react-icons/bs";
 
 function BackofficeSession() {
 
+    const [zoomed, setZoomed] = useState(false);
     const [seekTime, setSeekTime] = useState(0);
     const [active, setActive] = useState(false);
     const [playBackText, setplayBackText] = useState("1x");
@@ -93,6 +94,10 @@ function BackofficeSession() {
             setplayBackText("8x")
             setActive(true)
         }
+    }
+
+    const handleZoomPhotos = () => {
+        setZoomed(!zoomed)
     }
 
     return (
@@ -255,7 +260,7 @@ function BackofficeSession() {
                                     </div>
                                 </div>
                                 <div className='right-grid-backoffice-session'>
-                                    <div className='bo_photos d-flex gap-4'>
+                                    <div className={`${zoomed ? "bo_photos_fixed" : "bo_photos_relative"} bo_photos d-flex gap-4 w-100`} onClick={handleZoomPhotos}>
                                         <div className='bo_photos_tile w-50'>
                                             <img src="/photo.png" alt="" className='w-100' />
                                             <div className='w-100 text-center'>Face Photo</div>
@@ -315,7 +320,7 @@ function BackofficeSession() {
                                                 <div className='bo_chats_icon blue d-flex align-items-center justify-content-center'>
                                                     <BsChatDots size={30} color='white' />
                                                 </div>
-                                                <div className='d-flex align-items-center justify-content-center fw-bold' style={{color: "var(--text-color)"}}>
+                                                <div className='d-flex align-items-center justify-content-center fw-bold' style={{ color: "var(--text-color)" }}>
                                                     Proctor Messages
                                                 </div>
                                             </button>
