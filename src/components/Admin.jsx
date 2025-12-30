@@ -14,6 +14,7 @@ import AdminStep5 from './AdminStep5';
 
 function Admin() {
     const navigate = useNavigate();
+    
 
     const [steps, setSteps] = useState({
         step1: true,
