@@ -262,11 +262,13 @@ function BackofficeSession() {
                                 <div className='right-grid-backoffice-session'>
                                     <div className={`${zoomed ? "bo_photos_fixed" : "bo_photos_relative"} bo_photos d-flex gap-4 w-100`} onClick={handleZoomPhotos}>
                                         <div className='bo_photos_tile w-50'>
-                                            <img src="/photo.png" alt="" className='w-100' />
+                                            {/* <img src="/photo.png" alt="" className='w-100' /> */}
+                                            <img src="" alt="" className='w-100' />
                                             <div className='w-100 text-center'>Face Photo</div>
                                         </div>
                                         <div className='bo_photos_tile w-50'>
-                                            <img src="/id.png" alt="" className='w-100' />
+                                            {/* <img src="/id.png" alt="" className='w-100' /> */}
+                                            <img src="" alt="" className='w-100' />
                                             <div className='w-100 text-center'>ID Card</div>
                                         </div>
                                         <div className='click_to_zoom d-none'>

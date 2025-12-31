@@ -268,8 +268,10 @@
 }
 
 .bo_photos_tile img {
-    min-width: 40px;
+    min-width: 100%;
+    min-height: 40px;
     border-radius: 5px 5px 0 0;
+    background-color: #000000;
 }
 
 .bo_photos_tile div {
