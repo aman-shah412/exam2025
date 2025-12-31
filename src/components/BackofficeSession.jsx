@@ -13,6 +13,7 @@ import { BsChatDots } from "react-icons/bs";
 function BackofficeSession() {
 
     const [zoomed, setZoomed] = useState(false);
+    const [fullScreen, setFullScreen] = useState(false);
     const [seekTime, setSeekTime] = useState(0);
     const [active, setActive] = useState(false);
     const [playBackText, setplayBackText] = useState("1x");
@@ -102,7 +103,7 @@ function BackofficeSession() {
 
     return (
         <>
-            <div className='backoffice-main-content-box'>
+            <div className='backoffice-main-content-box' style={fullScreen ? { overflow: "hidden" } : {}}>
                 <Navbar />
                 <div className='backoffice-session-main-container'>
                     <SecondaryNavbar title={"Backoffice"} handleHomeClick={handleHomeClick} />
@@ -119,65 +120,66 @@ function BackofficeSession() {
                             </div>
                             <div className="bottom-div-backoffice-session">
                                 <div className='left-grid-backoffice-session'>
-                                    <div className='backoffice-mini-player'>
-                                        <div className="backoffice-streams-container">
-                                            <div className="left-panel"></div>
-                                            <div className="right-container">
-                                                <div className="right-top"></div>
-                                                <div className="right-bottom"></div>
-                                            </div>
-                                        </div>
-                                        <div className='backoffice-controller d-flex'>
-                                            <div className='utility-buttons d-flex'>
-                                                <button className='control-button d-flex justify-content-center align-items-center'>
-                                                    <FaPlay size={15} />
-                                                </button>
-                                                <button className='control-button d-flex justify-content-center align-items-center'>
-                                                    <MdOutlineReplay10 size={23} />
-                                                </button>
-                                                <button className='control-button d-flex justify-content-center align-items-center'>
-                                                    <MdOutlineForward10 size={23} />
-                                                </button>
-                                            </div>
-                                            <div className='seekbar-div px-2 pb-1 flex-grow-1 d-flex flex-column justify-content-between'>
-                                                <div className='d-flex justify-content-between'>
-                                                    <span className='timer fw-bold'>00:00:00</span>
-                                                    <span className='timer fw-bold'>00:00:00</span>
+                                    <div style={{ height: "437.5px" }}>
+                                        <div className={fullScreen ? 'backoffice-mini-player-fullscreen' : 'backoffice-mini-player'}>
+                                            <div className="backoffice-streams-container" style={fullScreen ? { height: "92%" } : {}}>
+                                                <div className="left-panel"></div>
+                                                <div className="right-container">
+                                                    <div className="right-top"></div>
+                                                    <div className="right-bottom"></div>
                                                 </div>
-                                                <input type="range" name="seekbar" className='range' min={0} max={100} value={seekTime} onChange={handleSeekTime} />
                                             </div>
-                                            <div className='utility-buttons d-flex'>
-                                                <div className='control-button tool d-flex justify-content-center align-items-center'>
-                                                    <span className='fw-bold' style={{ 'fontSize': '12px' }}>1x</span>
-
-                                                    <div className="d-flex speed-tool-tip">
-                                                        <button onClick={playBack1} className="control-button">
-                                                            <span className='fw-bold' style={{ 'fontSize': '12px' }}>1x</span>
-                                                        </button>
-                                                        <button onClick={playBack2} className="control-button">
-                                                            <span className='fw-bold' style={{ 'fontSize': '12px' }}>2x</span>
-                                                        </button>
-                                                        <button onClick={playBack4} className="control-button">
-                                                            <span className='fw-bold' style={{ 'fontSize': '12px' }}>4x</span>
-                                                        </button>
-                                                        <button onClick={playBack6} className="control-button">
-                                                            <span className='fw-bold' style={{ 'fontSize': '12px' }}>6x</span>
-                                                        </button>
-                                                        <button onClick={playBack8} className="control-button">
-                                                            <span className='fw-bold' style={{ 'fontSize': '12px' }}>8x</span>
-                                                        </button>
+                                            <div className='backoffice-controller d-flex'>
+                                                <div className='utility-buttons d-flex'>
+                                                    <button className='control-button d-flex justify-content-center align-items-center'>
+                                                        <FaPlay size={15} />
+                                                    </button>
+                                                    <button className='control-button d-flex justify-content-center align-items-center'>
+                                                        <MdOutlineReplay10 size={23} />
+                                                    </button>
+                                                    <button className='control-button d-flex justify-content-center align-items-center'>
+                                                        <MdOutlineForward10 size={23} />
+                                                    </button>
+                                                </div>
+                                                <div className='seekbar-div px-2 pb-1 flex-grow-1 d-flex flex-column justify-content-between'>
+                                                    <div className='d-flex justify-content-between'>
+                                                        <span className='timer fw-bold'>00:00:00</span>
+                                                        <span className='timer fw-bold'>00:00:00</span>
                                                     </div>
+                                                    <input type="range" name="seekbar" className='range' min={0} max={100} value={seekTime} onChange={handleSeekTime} />
                                                 </div>
-                                                <button className='control-button d-flex justify-content-center align-items-center'>
-                                                    <MdVolumeUp size={23} />
-                                                </button>
-                                                <button className='control-button d-flex justify-content-center align-items-center'>
-                                                    <MdOutlineFullscreen size={23} />
-                                                </button>
+                                                <div className='utility-buttons d-flex'>
+                                                    <div className='control-button tool d-flex justify-content-center align-items-center'>
+                                                        <span className='fw-bold' style={{ 'fontSize': '12px' }}>1x</span>
+
+                                                        <div className="d-flex speed-tool-tip">
+                                                            <button onClick={playBack1} className="control-button">
+                                                                <span className='fw-bold' style={{ 'fontSize': '12px' }}>1x</span>
+                                                            </button>
+                                                            <button onClick={playBack2} className="control-button">
+                                                                <span className='fw-bold' style={{ 'fontSize': '12px' }}>2x</span>
+                                                            </button>
+                                                            <button onClick={playBack4} className="control-button">
+                                                                <span className='fw-bold' style={{ 'fontSize': '12px' }}>4x</span>
+                                                            </button>
+                                                            <button onClick={playBack6} className="control-button">
+                                                                <span className='fw-bold' style={{ 'fontSize': '12px' }}>6x</span>
+                                                            </button>
+                                                            <button onClick={playBack8} className="control-button">
+                                                                <span className='fw-bold' style={{ 'fontSize': '12px' }}>8x</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <button className='control-button d-flex justify-content-center align-items-center'>
+                                                        <MdVolumeUp size={23} />
+                                                    </button>
+                                                    <button onClick={() => { setFullScreen(!fullScreen) }} className='control-button d-flex justify-content-center align-items-center'>
+                                                        <MdOutlineFullscreen size={23} />
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-
                                     <div className='attachments d-flex justify-content-between'>
                                         <button className='visited-or-files d-flex'>
                                             <div className='linked-icon d-flex align-items-center justify-content-center'>
